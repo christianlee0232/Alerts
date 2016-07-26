@@ -1,0 +1,17 @@
+<template name="Alerts">
+   <!-- only have either entire newRecipe template or just New Recipe button-->
+    {{#if $.Session.get 'newAlert'}}
+       {{>NewAlert}}
+   {{else}}
+        <button class="new-alert">New Alert</button>
+    {{/if}}
+    <section class="alerts">
+        {{#if Template.subscriptionsReady}}
+            {{#each alerts}}
+                {{>Alert}}
+            {{/each}}
+        {{else}}
+            <p>Loading</p>
+        {{/if}}
+    </section>
+</template>

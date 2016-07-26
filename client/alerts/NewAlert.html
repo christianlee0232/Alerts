@@ -1,0 +1,18 @@
+<template name="NewAlert">
+    <div class="new-alert-container">
+       <!-- Font Awesome closing icon-->
+       <i class="fa fa-close"></i>
+        {{#if mapOn}}
+            <p>Map</p>
+            <i class="fa fa-minus-square" aria-hidden="true"></i>
+            <body>
+                {{> map}}
+            </body>
+        {{else}}
+           <p>Map</p>
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+        {{/if}}
+        {{>quickForm collection="Alerts" id="insertAlertForm" type="insert" class= "new-alert-form"}}
+
+    </div>
+</template>
