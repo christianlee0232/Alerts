@@ -4,14 +4,28 @@ Alerts.allow({
     insert: function(userId, doc){
         return !!userId;
     },
-    insert: function(){
-        return !!userId;
-    },
     update: function(userId, doc) {
         return !!userId;
     }
 });
-    
+LatLng = new SimpleSchema({
+    lat: {
+        type: Number,
+        label: "Latitude",
+        decimal: true,
+        autoform: {
+            optional: true
+        }
+    },
+    lng: {
+        type: Number,
+        label: "Longitude",
+        decimal: true,
+        autoform: {
+            optional: true
+        }
+    }
+});
 AlertSchema = new SimpleSchema({
     
     priority: {
@@ -69,9 +83,14 @@ AlertSchema = new SimpleSchema({
             type: "hidden"
         }
     },
+    LatLng:{
+        type: LatLng,
+        autoform: {
+            type: "hidden",
+        }
+    },
     
 });
-    
-Alerts.attachSchema(AlertSchema);
 
+Alerts.attachSchema(AlertSchema);
 
