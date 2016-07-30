@@ -1,0 +1,12 @@
+{
+    "public": {
+    },
+    "connectionInfo": {
+        "url": "http://10.10.2.25/proximexws/proximexws.asmx/",
+        "user": "Administrator",
+        "pwd": "DBswVcMVwpmoiuKg6QkXQwEVMBo5yGuU",
+        "sysName": "DefaultOperationalAlert",
+        "areaID": "1",
+        "sensorID": "1"
+    }
+}

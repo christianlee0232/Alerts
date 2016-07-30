@@ -5,7 +5,7 @@ Template.Alerts.onCreated(function() {
     });
 });
 Template.Alerts.helpers({
-    alerts: ()=> {
+    Alerts: ()=> {
         return Alerts.find({});
     }
 });

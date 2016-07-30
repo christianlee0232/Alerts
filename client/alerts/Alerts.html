@@ -6,8 +6,9 @@
         <button class="new-alert">New Alert</button>
     {{/if}}
     <section class="alerts">
+        <!--if the Alerts template subscription is ready it will show the alerts, if not it will show "loading"-->
         {{#if Template.subscriptionsReady}}
-            {{#each alerts}}
+            {{#each Alerts}}
                 {{>Alert}}
             {{/each}}
         {{else}}

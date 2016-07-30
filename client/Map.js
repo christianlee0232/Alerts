@@ -4,7 +4,6 @@ Meteor.subscribe('markers');
 
 var currentLatLng = "noLatLng";
 
-    
 Template.map.rendered = function() {
     
   $(window).resize(function() {
@@ -52,8 +51,4 @@ Template.map.rendered = function() {
     }
   });
 };
-
-
-
- 
 // create marker collection

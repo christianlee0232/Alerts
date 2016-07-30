@@ -1,18 +1,23 @@
+//When each Alert is created, it sets reactiveVar editMode to false
 Template.Alert.onCreated(function(){
     //reactive Variable:means to store single values. better from local data
     //Setting ReactiveVar to false means that each alert starts with editMode off
     this.editMode = new ReactiveVar(false);
-    //this.editMode.set(false);
 });
 
+//helpers pass js code into templates 
 Template.Alert.helpers({
+    //
     updateAlertId: function() {
         return this._id;
     },
+    //return the editMode Template 
     editMode: function() {
         return Template.instance().editMode.get();
     }
 });
+
+//Event listeners
 Template.Alert.events({
    'click .toggle-unresolved': function() {
        Meteor.call('toggleUnresolvedItem', this._id, this.inUnresolved);

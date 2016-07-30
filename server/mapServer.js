@@ -10,10 +10,6 @@ Meteor.publish("markers", function (){
     return Markers.find();
 });
 
-Meteor.publish("markers", function () {
-    return Markers.find();
-});
-
 Markers.allow({
     'insert': function(userId, doc) {
         console.log("Doc:" + doc);
