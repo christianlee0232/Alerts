@@ -44,7 +44,8 @@ var preHooks = {
            alert.LatLng.lat = Session.get('lat');
            alert.LatLng.lng = Session.get('lng');
            console.log(alert);
-           return alert;
+           Meteor.call('createAlertFromRecipe', alert);
+            return alert;
        }
 //    },
 //     onSubmit: function (insertDoc, updateDoc, currentDoc)  { 
