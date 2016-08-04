@@ -1,5 +1,6 @@
 # Alerts
 1) Open Terminal and run the following shell script code: 
+
     - chmod +x alertsstartup.command
     - chmod +x rocketstartup.command
     - chmod +x startup.command
