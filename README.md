@@ -1,5 +1,9 @@
 # Alerts
-1) Open Terminal and run the following shell script code (....)
+1) Open Terminal and run the following shell script code: 
+    - chmod +x alertsstartup.command
+    - chmod +x rocketstartup.command
+    - chmod +x startup.command
+    - Then open up the startup.command folder
 
 2) After Rocket Chat is up and running, create an account.
 
